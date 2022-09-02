@@ -1,0 +1,104 @@
+import math
+
+timees = int(input("how many times do you want to use the calculator?"))
+counter = timees - (timees -1)
+print("you're using calculator for:"   )  
+
+
+print("Select operation.")
+print("1.Add")
+print("2.Subtract")
+print("3.Multiply")
+print("4.Divide")
+print("5.pow")
+print("6.mod")
+print("7.pow2")
+print("8.factorial")
+print("9.sin")
+print("10.cos")
+print("11.tan")
+print("12.fabs")
+print("13.sqrt")
+
+while True:
+
+    choice = input("Enter choice: ")
+
+    if choice in ('1', '2', '3', '4' , '5' , '6'):
+
+        num1 = int(input("Enter first number: "))
+        num2 = int(input("Enter second number: "))
+
+        add = num1 + num2 
+        minus = num1 - num2
+        time = num1 * num2
+        divide = num1 / num2
+        mod = num1 %num2
+        pow = num1 ** num2
+
+
+        
+        if choice == '1':
+            print(num1, "+", num2, "=", add)
+
+        elif choice == '2':
+            print(num1, "-", num2, "=", minus)
+
+        elif choice == '3':
+            print(num1, "*", num2, "=", time)
+
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide)
+
+        elif choice == '5':
+            print(num1, "**", num2, "=", pow)
+
+        elif choice == '6':
+            print(num1, "%", num2, "=", mod)
+        
+    elif choice in ('7', '8', '9', '10' , '11' , '12' , '13'):
+
+        num = int(input("Enter  number: "))
+
+        pow2 = num ** 2
+        sin = math.sin(num)
+        cos = math.cos(num)
+        tan = math.tan(num)
+        fabs = math.fabs(num) 
+        sqrt = math.sqrt(num)
+        factorial = math.factorial(num)
+
+
+
+        if choice == '7':
+            print(num, "**", '2', "=", pow2)
+
+        elif choice == '8':
+            print(num, "factorial", "=", factorial)
+
+        elif choice == '9':
+            print( "sin", num, "=", sin)
+        
+        elif choice == '10':
+            print( "con", num, "=", cos)
+
+        elif choice == '11':
+            print( "tan", num, "=", tan)
+
+        elif choice == '12':
+            print(num, "fabs", "=", fabs)
+
+        elif choice == '13':
+            print(num, "sqrt", "=", sqrt)
+
+        
+       
+    next_calculation = input("Let's do next calculation? (yes/no): ")
+    if next_calculation == "no":
+        print("thanks")
+        break
+    elif next_calculation == "yes":
+        counter+=1
+        print("you're using calculator for:" , counter )  
+    else:
+        print("Invalid Input")
